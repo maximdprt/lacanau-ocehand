@@ -36,17 +36,17 @@ export function SiteHeader() {
           : "border-b border-white/0 bg-white/70 backdrop-blur-lg",
       )}
     >
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-3 sm:h-16 sm:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-85">
+        <Link href="/" className="flex items-center gap-2.5 transition-opacity hover:opacity-85 sm:gap-3">
           <Image
             src="/placeholders/logo-main.png"
             alt="Logo Lacanau Ocehand"
             width={38}
             height={38}
-            className="h-9 w-9 object-contain"
+            className="h-8 w-8 object-contain sm:h-9 sm:w-9"
           />
-          <span className="font-display text-xl uppercase tracking-wider text-slate-900 sm:text-2xl">
+          <span className="hidden font-display text-xl uppercase tracking-wider text-slate-900 sm:block sm:text-2xl">
             Lacanau Ocehand
           </span>
         </Link>
@@ -88,7 +88,7 @@ export function SiteHeader() {
       <div
         className={cn(
           "overflow-hidden transition-all duration-300 lg:hidden",
-          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0",
+          open ? "max-h-[70vh] overflow-y-auto opacity-100" : "max-h-0 opacity-0",
         )}
       >
         <div className="space-y-1 border-t border-slate-200 bg-white/95 px-4 py-3 backdrop-blur-lg">
@@ -121,3 +121,5 @@ export function SiteHeader() {
     </header>
   );
 }
+
+

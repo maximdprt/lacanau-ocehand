@@ -43,14 +43,14 @@ export default function Home() {
       {/* KPIs strip */}
       <Reveal>
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
-          <div className="grid grid-cols-2 gap-4 py-10 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 py-8 sm:gap-4 sm:py-10 md:grid-cols-4">
             {kpis.map(({ icon: Icon, value, label, color }) => (
               <div
                 key={label}
-                className="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition hover:shadow-md"
+                className="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-4 text-center sm:p-5 shadow-sm transition hover:shadow-md"
               >
                 <Icon size={22} className={color} />
-                <p className={`mt-2 font-display text-4xl uppercase ${color}`}>{value}</p>
+                <p className={`mt-2 font-display text-3xl uppercase sm:text-4xl ${color}`}>{value}</p>
                 <p className="mt-1 text-xs font-medium uppercase tracking-wider text-slate-500">{label}</p>
               </div>
             ))}
@@ -69,12 +69,12 @@ export default function Home() {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950/88 via-slate-900/55 to-slate-800/10" />
-            <div className="relative grid gap-6 p-8 md:grid-cols-2 md:p-14">
+            <div className="relative grid gap-5 p-5 sm:p-8 md:grid-cols-2 md:p-14">
               <div className="space-y-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ocean-light">
                   Un club ouvert a tous
                 </p>
-                <h2 className="font-display text-4xl uppercase leading-[0.92] text-white md:text-5xl">
+                <h2 className="font-display text-3xl uppercase sm:text-4xl leading-[0.92] text-white md:text-5xl">
                   Handball, beach handball, convivialite
                 </h2>
                 <p className="max-w-lg text-base leading-relaxed text-white/75">
@@ -84,13 +84,13 @@ export default function Home() {
                 <div className="flex flex-wrap gap-3 pt-2">
                   <Link
                     href="/equipes"
-                    className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm sm:w-auto font-semibold text-slate-900 transition hover:bg-slate-100"
                   >
                     Nos equipes <ArrowRight size={14} />
                   </Link>
                   <Link
                     href="/rejoindre"
-                    className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-2.5 text-sm sm:w-auto font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
                   >
                     S&apos;inscrire
                   </Link>
@@ -154,3 +154,4 @@ export default function Home() {
     </div>
   );
 }
+

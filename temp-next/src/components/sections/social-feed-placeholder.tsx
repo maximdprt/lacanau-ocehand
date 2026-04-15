@@ -36,7 +36,7 @@ export function SocialFeedPlaceholder() {
     <div className="grid gap-6 lg:grid-cols-2">
       {/* Instagram */}
       <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-        <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4">
+        <div className="flex flex-col items-start justify-between gap-2 border-b border-slate-100 px-4 py-4 sm:flex-row sm:items-center sm:px-5">
           <span className="flex items-center gap-2 text-sm font-semibold text-slate-800">
             <Camera size={18} className="text-[#E1306C]" />
             Instagram
@@ -50,7 +50,7 @@ export function SocialFeedPlaceholder() {
             @lacanauocehand <ExternalLink size={10} />
           </a>
         </div>
-        <div className="grid grid-cols-2 gap-3 p-4">
+        <div className="grid grid-cols-1 gap-3 p-3 sm:grid-cols-2 sm:p-4">
           {igPosts.map((post) => (
             <PostCard key={post.id} post={post} />
           ))}
@@ -60,7 +60,7 @@ export function SocialFeedPlaceholder() {
             href={instagramUrl}
             target="_blank"
             rel="noreferrer"
-            className="block w-full rounded-full border border-slate-200 py-2.5 text-center text-xs font-semibold uppercase tracking-wider text-slate-600 transition hover:border-[#E1306C]/50 hover:text-[#E1306C]"
+            className="block w-full rounded-full border border-slate-200 py-2.5 text-center text-[11px] font-semibold uppercase tracking-wider text-slate-600 transition hover:border-[#E1306C]/50 hover:text-[#E1306C]"
           >
             Voir le profil Instagram
           </a>
@@ -69,7 +69,7 @@ export function SocialFeedPlaceholder() {
 
       {/* Facebook */}
       <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
-        <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4">
+        <div className="flex flex-col items-start justify-between gap-2 border-b border-slate-100 px-4 py-4 sm:flex-row sm:items-center sm:px-5">
           <span className="flex items-center gap-2 text-sm font-semibold text-slate-800">
             <ThumbsUp size={18} className="text-[#1877F2]" />
             Facebook
@@ -83,7 +83,7 @@ export function SocialFeedPlaceholder() {
             Lacanau OceHand <ExternalLink size={10} />
           </a>
         </div>
-        <div className="grid grid-cols-2 gap-3 p-4">
+        <div className="grid grid-cols-1 gap-3 p-3 sm:grid-cols-2 sm:p-4">
           {fbPosts.map((post) => (
             <PostCard key={post.id} post={post} />
           ))}
@@ -93,7 +93,7 @@ export function SocialFeedPlaceholder() {
             href={facebookUrl}
             target="_blank"
             rel="noreferrer"
-            className="block w-full rounded-full border border-slate-200 py-2.5 text-center text-xs font-semibold uppercase tracking-wider text-slate-600 transition hover:border-[#1877F2]/50 hover:text-[#1877F2]"
+            className="block w-full rounded-full border border-slate-200 py-2.5 text-center text-[11px] font-semibold uppercase tracking-wider text-slate-600 transition hover:border-[#1877F2]/50 hover:text-[#1877F2]"
           >
             Voir la page Facebook
           </a>
@@ -102,3 +102,4 @@ export function SocialFeedPlaceholder() {
     </div>
   );
 }
+
